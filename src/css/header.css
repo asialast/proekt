@@ -1,0 +1,942 @@
+
+.head{
+    background:#D4E9F9;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    padding-right: 29px;
+    margin: 0 ;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+.head__img{
+    padding-right: 10px;
+    max-width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.top-bar {
+    height: 48px;
+    background-color:#F7EBE5; 
+    padding: 0px 135px;
+    display: flex; 
+    justify-content: start;
+    align-items: center; 
+    font-size: 14px; 
+    color: #555; 
+    white-space: nowrap; 
+    scrollbar-width: none;
+    transition: all 0.3s ease;
+}
+
+.top-bar__nav-list {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap;
+}
+
+.top-bar__nav-list li a {
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.2s ease; 
+    white-space: nowrap;
+}
+
+.top-bar__nav-list li a:hover {
+    color: #333; 
+}
+
+.top-bar__info {
+    display: flex; 
+    align-items: center; 
+    gap: 45px;
+    padding-left:70px ; 
+    transition: all 0.3s ease;
+}
+
+.top-bar__location i,
+.top-bar__phone i,
+.top-bar__social i {
+    font-size: 16px; 
+    margin-right: 5px; 
+    color: #333; 
+}
+
+.top-bar__dropdown-arrow {
+    font-size: 10px; 
+    margin-left: 5px;
+    vertical-align: middle; 
+    color: #777; 
+}
+
+.top-bar__social {
+    display: flex; 
+    gap: 15px; 
+}
+
+.top-bar__social a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.top-bar__social a:hover {
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #fff;
+    min-height: 120px; 
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navigation__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 95px;
+    transition: all 0.3s ease;
+}
+
+.navigation__list {
+    display: flex;
+    gap: 30px; 
+    flex-wrap: wrap;
+}
+
+.navigation__list--left {
+    margin-right: auto;
+}
+
+.navigation__list--right {
+    margin-left: auto; 
+}
+
+.navigation__item {
+    position: relative;
+}
+
+.navigation__link {
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    transition: color 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.navigation__link:hover {
+    color: #e91e63;
+}
+
+.navigation__badge {
+    background-color: #e91e63;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 8px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.navigation__arrow {
+    margin-left: 5px;
+    font-size: 10px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.navigation__logo-link {
+    display: block;
+    height: 100%;
+    flex-shrink: 0; 
+    margin: 0 20px; 
+    transition: all 0.3s ease;
+}
+
+.logo-block__circle {
+    background-color: #ADD8E6;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.logo-block__text {
+    color: #333;
+    font-size: 19px;
+    line-height: 1.1;
+    font-weight: 500;
+    text-transform: lowercase;
+    transition: all 0.3s ease;
+}
+
+.logo-block__text--macaron {
+    margin-top: 5px;
+}
+
+.logo-block__text--shop {
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.logo-block__icon {
+    position: absolute;
+}
+
+.logo-block__icon--hat {
+    top: 15px;
+    width: 60px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 -5px 0 0 white, 0 -10px 0 0 white;
+    transform: translateX(-50%);
+    left: 50%;
+    transition: all 0.3s ease;
+}
+
+.logo-block__icon--bowtie {
+    bottom: 20px;
+    width: 30px;
+    height: 10px;
+    background-color: white;
+    border-radius: 3px;
+    transform: translateX(-50%) rotate(45deg);
+    left: 50%;
+    transition: all 0.3s ease;
+}
+
+.navigation__dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-width: 180px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 900; 
+}
+
+.navigation__item--dropdown:hover > .navigation__dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navigation__dropdown-item a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    font-size: 14px;
+    white-space: nowrap; 
+}
+
+.navigation__dropdown-item a:hover {
+    background-color: #f0f0f0;
+    color: #e91e63;
+}
+
+.navigation__toggle-input {
+    display: none;
+}
+
+.navigation__toggler {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 100; 
+    margin-right: 20px; 
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navigation__toggler-icon {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navigation__toggler-icon::before,
+.navigation__toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+}
+
+.navigation__toggler-icon::before {
+    top: -8px;
+}
+
+.navigation__toggler-icon::after {
+    bottom: -8px;
+}
+
+.navigation__toggle-input:checked + .navigation__toggler .navigation__toggler-icon {
+    background-color: transparent; 
+}
+
+.navigation__toggle-input:checked + .navigation__toggler .navigation__toggler-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.navigation__toggle-input:checked + .navigation__toggler .navigation__toggler-icon::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 1200px) {
+    .top-bar {
+        padding: 0px 80px;
+    }
+    
+    .top-bar__info {
+        padding-left: 80px;
+        gap: 35px;
+    }
+    
+    .navigation {
+        padding: 15px 30px;
+    }
+    
+    .navigation__wrapper {
+        padding-left: 50px;
+    }
+    
+    .navigation__list {
+        gap: 20px;
+    }
+    
+    .logo-block__circle {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .logo-block__text {
+        font-size: 18px;
+    }
+    
+    .logo-block__icon--hat {
+        width: 55px;
+        height: 23px;
+    }
+    
+    .logo-block__icon--bowtie {
+        width: 28px;
+        height: 9px;
+    }
+}
+
+/* 2. От 900px до 1000px - более плотная адаптация */
+@media (max-width: 1000px) {
+    /* Синяя шапка - уменьшаем */
+    .head {
+        height: 45px;
+        padding-right: 20px;
+    }
+    
+    .head__img {
+        max-height: 30px;
+        padding-right: 8px;
+    }
+    
+    /* Верхняя панель */
+    .top-bar {
+        padding: 0px 40px;
+        height: 44px;
+        font-size: 13px;
+    }
+    
+    .top-bar__info {
+        padding-left: 40px;
+        gap: 25px;
+    }
+    
+    .top-bar__social {
+        gap: 12px;
+    }
+    
+    /* Основная навигация */
+    .navigation {
+        padding: 15px 25px;
+        min-height: 110px;
+    }
+    
+    .navigation__wrapper {
+        padding-left: 30px;
+    }
+    
+    .navigation__list {
+        gap: 15px;
+    }
+    
+    .navigation__link {
+        font-size: 14px;
+    }
+    
+    /* Логотип */
+    .navigation__logo-link {
+        margin: 0 15px;
+    }
+    
+    .logo-block__circle {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .logo-block__text {
+        font-size: 16px;
+    }
+    
+    .logo-block__icon--hat {
+        width: 50px;
+        height: 20px;
+        top: 12px;
+    }
+    
+    .logo-block__icon--bowtie {
+        width: 25px;
+        height: 8px;
+        bottom: 18px;
+    }
+}
+
+/* 3. От 800px до 900px - начинаем скрывать/уплотнять элементы */
+@media (max-width: 900px) {
+    .top-bar {
+        padding: 0px 30px;
+        justify-content: space-between;
+    }
+    
+    .top-bar__info {
+        padding-left: 0;
+        gap: 20px;
+    }
+    
+    .navigation {
+        padding: 15px 20px;
+        min-height: 100px;
+    }
+    
+    .navigation__wrapper {
+        padding-left: 0;
+        justify-content: center;
+    }
+    
+    .navigation__list--left,
+    .navigation__list--right {
+        margin: 0 10px;
+    }
+    
+    .navigation__list {
+        gap: 12px;
+    }
+    
+    .navigation__link {
+        font-size: 13.5px;
+    }
+    
+    .logo-block__circle {
+        width: 95px;
+        height: 95px;
+    }
+    
+    .logo-block__text {
+        font-size: 15px;
+    }
+    
+    .head {
+        height: 42px;
+        padding-right: 15px;
+        font-size: 0.9em;
+    }
+    
+    .head__img {
+        max-height: 28px;
+        padding-right: 6px;
+    }
+}
+
+/* 4. От 768px до 800px - мобильный вид */
+@media (max-width: 800px) {
+    .top-bar {
+        height: auto;
+        min-height: 44px;
+        padding: 8px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .top-bar__nav-list {
+        justify-content: center;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    
+    .top-bar__info {
+        justify-content: center;
+        width: 100%;
+        gap: 25px;
+    }
+    
+    .navigation {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        padding: 15px 20px;
+        min-height: auto;
+        position: relative;
+    }
+    
+    .navigation__toggler {
+        display: flex; 
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .navigation__wrapper {
+        flex-direction: column; 
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        padding: 20px 0;
+        z-index: 950;
+        padding-left: 0;
+    }
+    
+    .navigation__toggle-input:checked ~ .navigation__wrapper {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navigation__logo-link {
+        order: -1; 
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 10px; 
+        position: static;
+    }
+    
+    .logo-block__circle {
+        width: 100px;
+        height: 100px;
+    }
+    .logo-block__text {
+        font-size: 17px;
+    }
+    .logo-block__icon--hat {
+        width: 50px;
+        height: 20px;
+        top: 10px;
+    }
+    .logo-block__icon--bowtie {
+        width: 25px;
+        height: 8px;
+        bottom: 15px;
+    }
+    
+    .navigation__list {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 15px; 
+    }
+    
+    .navigation__list--left,
+    .navigation__list--right {
+        margin: 0; 
+        width: 100%;
+    }
+    
+    .navigation__item {
+        width: 100%; 
+        text-align: center;
+        border-bottom: 1px solid #eee; 
+    }
+    
+    .navigation__item:last-child {
+        border-bottom: none;
+    }
+    
+    .navigation__link {
+        padding: 12px 0;
+        justify-content: center; 
+        margin: 0;
+        font-size: 15px;
+    }
+    
+    .navigation__item--dropdown:hover > .navigation__dropdown-menu {
+        opacity: 0; 
+        visibility: hidden;
+        transform: translateY(10px);
+    }
+    
+    .navigation__item--dropdown {
+        width: 100%;
+    }
+    
+    .navigation__item--dropdown > .navigation__link:hover + .navigation__dropdown-menu,
+    .navigation__item--dropdown.is-open > .navigation__dropdown-menu {
+        position: static; 
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border-top: 1px solid #eee; 
+        margin-top: 0;
+        width: 100%;
+    }
+    
+    .navigation__dropdown-menu {
+        padding-left: 20px; 
+        background-color: #f9f9f9;
+        text-align: left; 
+    }
+    
+    /* Синяя шапка */
+    .head {
+        height: 40px;
+        padding: 5px 10px;
+        padding-right: 10px;
+        font-size: 0.85em;
+    }
+    
+    .head__img {
+        max-height: 25px;
+        padding-right: 5px;
+    }
+}
+
+/* 5. От 700px до 768px - компактный мобильный */
+@media (max-width: 768px) {
+    .head {
+        height: 38px;
+        font-size: 0.8em;
+    }
+    
+    .head__img {
+        max-height: 23px;
+    }
+    
+    .top-bar {
+        padding: 8px 15px;
+    }
+    
+    .top-bar__info {
+        gap: 20px;
+    }
+    
+    .top-bar__social {
+        gap: 10px;
+    }
+    
+    .navigation {
+        padding: 12px 15px;
+        min-height: 85px;
+    }
+    
+    .logo-block__circle {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .logo-block__text {
+        font-size: 15px;
+    }
+    
+    .logo-block__icon--hat {
+        width: 45px;
+        height: 18px;
+    }
+    
+    .logo-block__icon--bowtie {
+        width: 23px;
+        height: 7px;
+    }
+}
+
+/* 6. От 600px до 700px - очень компактный */
+@media (max-width: 700px) {
+    .head {
+        height: 35px;
+        font-size: 0.75em;
+    }
+    
+    .head__img {
+        max-height: 21px;
+        padding-right: 4px;
+    }
+    
+    .top-bar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 15px;
+    }
+    
+    .top-bar__nav-list {
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .top-bar__info {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    
+    .top-bar__location,
+    .top-bar__phone {
+        text-align: center;
+    }
+    
+    .navigation__toggler {
+        right: 15px;
+        width: 28px;
+        height: 23px;
+    }
+    
+    .navigation__wrapper {
+        width: 100%;
+    }
+}
+
+/* 7. От 500px до 600px - минимальные размеры */
+@media (max-width: 600px) {
+    .head {
+        height: 32px;
+        padding: 4px 8px;
+        font-size: 0.7em;
+    }
+    
+    .head__img {
+        max-height: 19px;
+    }
+    
+    .top-bar {
+        padding: 10px;
+    }
+    
+    .navigation {
+        padding: 10px;
+        min-height: 75px;
+    }
+    
+    .navigation__toggler {
+        right: 10px;
+        width: 25px;
+        height: 20px;
+    }
+    
+    .navigation__toggler-icon {
+        height: 2px;
+    }
+    
+    .navigation__toggler-icon::before,
+    .navigation__toggler-icon::after {
+        height: 2px;
+    }
+    
+    .navigation__toggler-icon::before {
+        top: -6px;
+    }
+    
+    .navigation__toggler-icon::after {
+        bottom: -6px;
+    }
+    
+    .logo-block__circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .logo-block__text {
+        font-size: 14px;
+    }
+    
+    .logo-block__icon--hat {
+        width: 40px;
+        height: 16px;
+        top: 12px;
+    }
+    
+    .logo-block__icon--bowtie {
+        width: 20px;
+        height: 6px;
+        bottom: 15px;
+    }
+    
+    .navigation__link {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    
+    .navigation__badge {
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+    }
+}
+
+/* 8. От 400px до 500px - очень маленькие экраны */
+@media (max-width: 500px) {
+    .head {
+        height: 30px;
+        padding: 3px 5px;
+        font-size: 0.65em;
+    }
+    
+    .head__img {
+        max-height: 17px;
+        padding-right: 3px;
+    }
+    
+    .top-bar__nav-list {
+        font-size: 12px;
+    }
+    
+    .top-bar__info {
+        font-size: 12px;
+        gap: 15px;
+    }
+    
+    .top-bar__social i {
+        font-size: 14px;
+    }
+    
+    .navigation {
+        min-height: 70px;
+    }
+    
+    .logo-block__circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .logo-block__text {
+        font-size: 13px;
+    }
+    
+    .logo-block__icon--hat {
+        width: 35px;
+        height: 14px;
+    }
+    
+    .logo-block__icon--bowtie {
+        width: 18px;
+        height: 5px;
+    }
+}
+
+/* 9. До 400px - минимальный размер */
+@media (max-width: 400px) {
+    .head {
+        height: 28px;
+        padding: 2px 3px;
+        font-size: 0.6em;
+    }
+    
+    .head__img {
+        max-height: 15px;
+    }
+    
+    .top-bar__info {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .top-bar__social {
+        gap: 8px;
+    }
+}
+
+/* Затемнение фона при открытом меню (для мобильных) */
+.navigation__toggle-input:checked ~ .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 940;
+    display: block;
+}
+
+.navigation__toggle-input:not(:checked) ~ .overlay {
+    display: none;
+}
+
+
+@media (min-width: 1440px) {
+    .head {
+    height: 40px;
+    }
+
+
+
+}
+

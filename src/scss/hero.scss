@@ -1,0 +1,157 @@
+.hero {
+    min-height: 480px;
+    background-image: url('../img/Group 351.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-items: center;
+      padding-top: 140px;
+      padding-left: 10px;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    &__title {
+      text-align: center;
+      font-size: 42px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
+  
+    &__img {
+      width: 272px;
+      padding-left: 30px;
+    }
+  
+    @media (min-width: 1025px) {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        pointer-events: none;
+      }
+    }
+  
+    /* Адаптивные стили для планшетов (768px - 1024px) */
+    @media (max-width: 1024px) {
+      min-height: 420px;
+  
+      &__content {
+        padding-top: 100px;
+      }
+  
+      &__title {
+        font-size: 36px;
+        margin-top: 15px;
+      }
+  
+      &__img {
+        width: 240px;
+      }
+    }
+  
+    /* Адаптивные стили для мобильных устройств (425px - 768px) */
+    @media (max-width: 768px) {
+      min-height: 380px;
+  
+      &__content {
+        padding-top: 80px;
+      }
+  
+      &__title {
+        font-size: 32px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        padding: 0 10px;
+      }
+  
+      &__img {
+        width: 200px;
+      }
+    }
+  
+    /* Адаптивные стили для маленьких мобильных устройств (до 425px) */
+    @media (max-width: 425px) {
+      min-height: 320px;
+  
+      &__content {
+        padding-top: 60px;
+      }
+  
+      &__title {
+        font-size: 28px;
+        margin-top: 10px;
+        margin-bottom: 8px;
+        padding: 0 5px;
+      }
+  
+      &__img {
+        width: 180px;
+      }
+    }
+  
+    /* Адаптивные стили для очень маленьких экранов (до 320px) */
+    @media (max-width: 320px) {
+      min-height: 280px;
+  
+      &__content {
+        padding-top: 50px;
+      }
+  
+      &__title {
+        font-size: 24px;
+      }
+  
+      &__img {
+        width: 150px;
+      }
+    }
+  
+    /* Для очень больших экранов (1440px+) */
+    @media (min-width: 1440px) {
+      border-radius: 10px;
+    }
+  }
+  
+  .container {
+    max-width: 1200px;
+    
+    @media (max-width: 768px) {
+      padding: 0 15px;
+    }
+    
+    @media (max-width: 425px) {
+      padding: 0 10px;
+    }
+  }
+  
+  .hero__description {
+    @media (max-width: 1024px) {
+      font-size: 16px;
+      padding: 0 20px;
+    }
+  
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding: 0 15px;
+    }
+  
+    @media (max-width: 425px) {
+      font-size: 14px;
+      padding: 0 10px;
+      line-height: 1.4;
+    }
+  
+    @media (max-width: 320px) {
+      font-size: 13px;
+    }
+  }

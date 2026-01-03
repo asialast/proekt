@@ -1,0 +1,88 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+
+.holidays {
+    text-align: center;
+}
+
+.holidays__div {
+    max-width: 1170px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Добавлено для центрирования изображения */
+    margin: 0 auto;
+    overflow: hidden; /* Чтобы изображение не выходило за границы */
+}
+
+.holidays__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Аналог background-size: cover */
+    display: block;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+    .holidays__div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .holidays__div {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .holidays__div {
+        min-height: 300px;
+        background-size: cover; /* На мобильных можно использовать cover если нужно заполнение */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .holidays__div {
+        min-height: 250px;
+        background-image: url('../img/Frame 368.png');
+        background-size: contain; /* Для мобильной версии тоже contain */
+    }
+}
+
+/* Дополнительные медиа-запросы для очень маленьких экранов */
+@media (max-width: 400px) {
+    .holidays__div {
+        min-height: 200px;
+    }
+}
+@media (min-width: 1440px) {
+    .holidays__div {
+        margin-bottom: 77px;
+    }
+   
+    
+ 
+}
+
