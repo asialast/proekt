@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hero{
+margin: 0;
+            display: flex;
+            background-image: url('img/Group\ 351.png');
+        }
+        .container{
+      margin: 0;
+            
+        }
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* Базовый размер шрифта */
+    line-height: 1.5;
+    color: #333; /* Темно-серый текст */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Наследует цвет родителя */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1200px; /* Фиксированная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 15px; /* Небольшие отступы по бокам */
+    box-sizing: border-box;
+}
+
+/* Верхняя панель */
+.top-bar {
+    background-color: #fce4ec; /* Нежно-розовый фон */
+    padding: 12px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300; /* Тонкое начертание */
+    font-size: 13px;
+    color: #555;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-links li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.top-bar-links a:hover {
+    color: #e91e63; /* Розовый при наведении */
+}
+
+.top-bar-info {
+    display: flex;
+    align-items: center;
+}
+
+/* Пустые теги для иконок */
+.location-icon,
+.arrow-down,
+.phone-icon,
+.email-icon,
+.vk-icon,
+.ok-icon {
+    display: inline-block; /* Чтобы можно было задать размер и фон */
+    width: 18px; /* Примерная ширина иконки */
+    height: 18px; /* Примерная высота иконки */
+    margin-right: 5px;
+    vertical-align: middle; /* Выравнивание по середине строки */
+    background-color: #eee; /* Серый фон для пустых иконок */
+    /* Для реальных иконок здесь будет background-image и свойства */
+}
+
+/* Отступы для конкретных "иконок" */
+.location-icon { margin-left: 15px; }
+.phone-icon { margin-left: 20px; }
+.email-icon { margin-left: 20px; }
+.vk-icon { margin-left: 10px; }
+.ok-icon { margin-left: 10px; }
+
+.arrow-down {
+    width: 10px; /* Меньше для стрелки */
+    height: 6px;
+    background-color: #555; /* Цвет стрелки */
+    margin-left: 3px;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%); /* Форма стрелки вниз */
+}
+
+/* Нижняя навигационная панель */
+.header-nav {
+    background-color: #ffffff; /* Белый фон */
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Легкая тень */
+}
+
+.header-nav .container {
+    display: flex;
+    justify-content: center; /* Центрирование содержимого */
+    align-items: center;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Среднее начертание */
+    font-size: 16px;
+    text-transform: uppercase; /* Заглавные буквы */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e91e63; /* Розовый при наведении */
+}
+
+/* Спецстиль для "СЛАДКИЕ ДНИ" с бейджем */
+.nav-link-with-badge {
+    position: relative;
+    display: inline-flex; /* Чтобы бейдж был рядом */
+    align-items: center;
+}
+
+.discount-badge {
+    display: inline-block;
+    background-color: #e91e63; /* Розовый цвет бейджа */
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+    box-shadow: 0 2px 5px rgba(233, 30, 99, 0.3);
+}
+
+/* Логотип */
+.logo img {
+    display: block;
+    height: 60px; /* Фиксированная высота для логотипа */
+    width: auto; /* Автоматическая ширина, чтобы сохранить пропорции */
+}
+
+/* Дополнительные стили для раскрывающихся меню, если они будут */
+.nav-links li:last-child {
+    margin-right: 0;
+}
+    </style>
+</head>
+<body>
+    <section class="hero" >
+        <div class="container">
+          <div class="hero__content">
+            <img src="img/Group 212.png" alt="name">
+         <p class="hero__title">Настоящая любовь</p>
+            <p class="hero__description">
+              Пирожные макарон и другие десерты <br>
+              из натуральных ингредиентов, приготовленные с любовью
+            </p>
+          </div>
+        </div>
+        </section>
+
+        <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macaron Shop Header</title>
+    <!-- Подключение Google Fonts для похожих шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <ul class="top-bar-links">
+                    <li><a href="#">Гарантия свежести</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Оптовые поставки</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="top-bar-info">
+                    <span class="location-icon"></span> Санкт-Петербург <span class="arrow-down"></span>
+                    <span class="phone-icon"></span> 8 812 309-82-88
+                    <span class="email-icon"></span>
+                    <span class="vk-icon"></span>
+                    <span class="ok-icon"></span>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="container">
+                <nav class="main-navigation">
+                    <ul class="nav-links">
+                        <li><a href="#" class="nav-link-with-badge">СЛАДКИЕ ДНИ <i class="discount-badge">%</i></a></li>
+                        <li><a href="#">ПОДАРОЧНЫЕ НАБОРЫ</a></li>
+                        <li><a href="#">СОБРАТЬ НАБОР</a></li>
+                    </ul>
+                    <div class="logo">
+                        <img src="https://via.placeholder.com/150x60/ADD8E6/FFFFFF?text=MacaronShop" alt="Macaron Shop Logo">
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#">СОЗДАТЬ ДИЗАЙН</a></li>
+                        <li><a href="#">КОМПАНИЯМ</a></li>
+                        <li><a href="#">ВЕСЬ КАТАЛОГ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое страницы, если оно есть -->
+    <main>
+        <!-- Здесь может быть основной контент -->
+    </main>
+</body>
+</html>
+</body>
+</html>

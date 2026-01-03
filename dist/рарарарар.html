@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Футер</title>
+    <!-- Подключение Google Fonts для шрифта Open Sans, который визуально похож на шрифт в макете -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Обнуление базовых стилей и определение шрифтов */
+        body {
+            margin: 0;
+            font-family: 'Open Sans', Arial, sans-serif; /* Шрифты, приоритет Open Sans */
+            line-height: 1.5;
+            color: #292929; /* Основной цвет текста по умолчанию */
+            background-color: #f8f8f8; /* Цвет фона страницы для контраста с футером */
+        }
+
+        /* Блок footer */
+        .footer {
+            background-color: #f5f5f5; /* Светло-серый фон, как на изображении */
+            padding: 40px 0; /* Внутренние отступы сверху и снизу */
+        }
+
+        /* Элемент: контейнер футера, ограничивающий ширину содержимого */
+        .footer__container {
+            max-width: 1170px; /* Максимальная ширина содержимого */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding: 0 20px; /* Горизонтальные отступы для адаптивности на маленьких экранах */
+            display: flex; /* По умолчанию (мобильные): Flexbox для вертикального стека */
+            flex-direction: column;
+            gap: 30px; /* Вертикальный отступ между основными секциями */
+            align-items: center; /* Центрирование по горизонтали на мобильных */
+        }
+
+        /* Элемент: верхнее содержимое футера (фичи + колонки) */
+        .footer__top-content {
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение фич и группы колонок на мобильных */
+            gap: 40px; /* Отступ между блоком фич и группой колонок */
+            width: 100%; /* Занимает всю ширину */
+            align-items: center; /* Центрирование содержимого на мобильных */
+        }
+
+        /* Элемент: секция фич (особенности) */
+        .footer__features {
+            display: flex;
+         /* Вертикальное расположение фич на мобильных */
+            align-items: center; /* Центрирование элементов фич по горизонтали */            gap: 30px; /* Отступ между отдельными фичами */
+            width: 100%;
+        }
+
+        /* Элемент: отдельный пункт фичи */
+        .footer__feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрирование иконки и текста внутри своего блока */
+            text-align: center; /* Центрирование текста */
+            width: 100%; /* Занимает всю доступную ширину на мобильных */
+            max-width: 150px; /* Ограничение ширины текстового блока фичи */
+        }
+
+        /* Элемент: иконка фичи (пустой тег img) */
+        .footer__feature-icon {
+            display: block;
+            margin-bottom: 10px;
+          
+        }
+
+        /* Элемент: текст фичи */
+        .footer__feature-text {
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        /* Элемент: группа колонок (информация, каталог, бизнес, контакты) */
+        .footer__columns-group {
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение колонок на мобильных */
+            gap: 30px; /* Отступ между колонками */
+            width: 100%;
+            align-items: center; /* Центрирование колонок на мобильных */
+        }
+
+        /* Элемент: отдельная колонка */
+        .footer__column {
+            width: 100%;
+            max-width: 250px; /* Ограничиваем ширину колонок на мобильных */
+            text-align: center; /* Центрирование текста колонок на мобильных */
+        }
+
+        /* Элемент: заголовок колонки */
+        .footer__column-title {
+            font-size: 16px;
+            font-weight: 600; /* Полужирный шрифт */
+            color: #292929;
+            margin-top: 0;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px; /* Небольшой межбуквенный интервал */
+            text-transform: uppercase; /* Текст в верхнем регистре, как на макете */
+        }
+
+        /* Элемент: список ссылок */
+        .footer__list {
+            list-style: none; /* Убираем маркеры списка */
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+         /* Отступ между элементами списка */
+        }
+
+        /* Элемент: пункт списка */
+        .footer__list-item {
+            margin: 0;
+        }
+
+        /* Элемент: ссылка */
+        .footer__link {
+            text-decoration: none; /* Убираем подчеркивание */
+            color: #292929;
+            font-size: 14px;
+            transition: color 0.2s ease; /* Плавное изменение цвета при наведении */
+            white-space: nowrap; /* Предотвращает перенос длинных ссылок */
+        }
+
+        .footer__link:hover {
+            color: #3498db; /* Синий цвет при наведении */
+        }
+
+        /* Элемент: детали контакта (телефон и часы) */
+        .footer__contact-details {
+            margin-bottom: 20px;
+        }
+
+        /* Элемент: номер телефона */
+        .footer__contact-phone {
+            font-size: 18px;
+            font-weight: 600; /* Полужирный шрифт */
+            color: #333;
+            margin: 0;
+            white-space: nowrap; /* Предотвращает перенос номера телефона */
+        }
+
+        /* Элемент: часы работы */
+        .footer__contact-hours {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0 0 0; /* Небольшой отступ сверху */
+        }
+
+        /* Элемент: ссылки на соцсети */
+        .footer__social-links {
+            display: flex;
+            gap: 10px; /* Отступ между иконками */
+            margin-top: 15px;
+            justify-content: center; /* Центрирование иконок на мобильных */
+        }
+
+        /* Элемент: ссылка на соцсеть (обертка для иконки) */
+        .footer__social-item {
+            display: block; /* Делает всю область круга кликабельной */
+        }
+
+        /* Элемент: иконка соцсети (пустой тег img) */
+        .footer__social-icon {
+            display: block;
+            width: 40px; /* Примерный размер иконки */
+            height: 40px;
+            
+            /* Заметка: внутренние логотипы соцсетей (Instagram, Facebook, VK) невозможно воспроизвести в пустом теге <img> только с помощью CSS.
+               Здесь используется простой белый круг с рамкой. */
+        }
+        /* Эффект при наведении на иконку соцсети */
+        .footer__social-item:hover .footer__social-icon {
+            border-color: #3498db; /* Синяя рамка при наведении */
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.2); /* Легкая тень */
+        }
+
+        /* Элемент: секция копирайта */
+        .footer__copyright {
+            text-align: center; /* Центрирование копирайта на мобильных */
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+            width: 100%; /* Занимает всю ширину */
+        }
+
+        .footer__copyright p {
+            margin: 0;
+        }
+
+        /* Адаптивные стили: планшеты и десктопы (от 768px) */
+        @media (min-width: 768px) {
+            .footer__container {
+                display: grid; /* На десктопе используем Grid */
+                grid-template-columns: 280px /* Ширина блока фич */
+                                       minmax(120px, 1fr) /* info */
+                                       minmax(120px, 1fr) /* catalog */
+                                       minmax(120px, 1fr) /* business */
+                                       200px; /* contact */
+                grid-template-areas:
+                    "features info catalog business contact"
+                    "copyright copyright copyright copyright copyright"; /* Копирайт занимает всю ширину */
+                
+                gap: 20px 30px; /* row-gap (между верхней частью и копирайтом) и column-gap (между колонками) */
+                align-items: start; /* Выравнивание всех элементов сетки по верхнему краю */
+                padding: 0; /* Убираем горизонтальный паддинг, если контейнер уже занимает max-width */
+                align-items: flex-start; /* Выравнивание всего контейнера по верхнему краю */
+            }
+
+            /* Элементы, которые были обертками для flexbox, теперь "пропускают" свои дочерние элементы в сетку */
+            .footer__top-content,
+            .footer__columns-group {
+                display: contents; /* Родитель не влияет на сетку, его дети становятся прямыми элементами сетки */
+            }
+
+            /* Размещение элементов в областях сетки */
+            .footer__features {
+                grid-area: features;
+                display: flex; /* Фичи внутри своего блока grid-area: feature
+                flex-direction: row; /* Фичи располагаются горизонтально */
+                justify-content: space-between; /* Равномерное распределение */
+                align-items: flex-start; /* Выравнивание блока фич по верхнему краю */
+                gap: 0; /* Промежутки между элементами управляются justify-content */
+            }
+            .footer__feature-item {
+                width: auto; /* Ширина элемента фичи подстраивается под содержимое */
+                max-width: 90px; /* Ограничиваем ширину для 3 элементов в ряду */
+            }
+
+            .footer__column--info {
+                grid-area: info;
+                text-align: left; /* Выравнивание по левому краю */
+            }
+            .footer__column--catalog {
+                grid-area: catalog;
+                text-align: left; /* Выравнивание по левому краю */
+            }
+            .footer__column--business {
+                grid-area: business;
+                text-align: left; /* Выравнивание по левому краю */
+            }
+            .footer__column--contact {
+                grid-area: contact;
+                text-align: right; /* Выравнивание по правому краю, как на изображении */
+            }
+            .footer__copyright {
+                grid-area: copyright;
+                text-align: left; /* Выравнивание по левому краю, как запрошено */
+                width: auto; /* Ширина по контенту или по области сетки */
+            }
+
+            .footer__social-links {
+                justify-content: flex-end; /* Выравнивание иконок соцсетей по правому краю */
+            }
+
+            /* На десктопе, заголовки и списки колонок не центрированы */
+            .footer__column-title,
+            .footer__list {
+                text-align: left;
+            }
+        }
+
+        /* Адаптивные стили: крупные десктопы (от 1024px) */
+        @media (min-width: 1024px) {
+            .footer__container {
+                padding: 0; /* Убираем горизонтальные отступы при максимальной ширине контейнера */
+                /* Тонкая настройка ширины колонок для пиксельного соответствия */
+                grid-template-columns: 280px /* Ширина блока фич */
+                                       minmax(130px, 1fr) /* info */
+                                       minmax(130px, 1fr) /* catalog */
+                                       minmax(130px, 1fr) /* business */
+                                       200px; /* contact */
+                gap: 40px 60px; /* Увеличиваем горизонтальный отступ между колонками */
+            }
+            .footer__feature-item {
+                max-width: 80px; /* Уточняем ширину элементов фич */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top-content">
+                <div class="footer__features">
+                    <div class="footer__feature-item">
+                        <img class="footer__feature-icon footer__feature-icon--heart" src="Frame (1).png" alt="Иконка сердца с десертом внутри, символизирующая ручное приготовление с любовью">
+                        <p class="footer__feature-text">Готовим вручную<br>и с любовью</p>
+                    </div>
+                    <div class="footer__feature-item">
+                        <img class="footer__feature-icon footer__feature-icon--truck" src="Group 18 (1).svg" alt="Иконка грузовика, символизирующая доставку в день заказа">
+                        <p class="footer__feature-text">Доставим<br>в день заказа</p>
+                    </div>
+                    <div class="footer__feature-item">
+                        <img class="footer__feature-icon footer__feature-icon--almonds" src="Vector (1).png" alt="Иконка миндальных орехов, символизирующая 100% миндальную муку и натуральные ингредиенты">
+                        <p class="footer__feature-text">
+100%<br>миндальная мука<br>и натуральные<br>ингредиенты</p>
+                    </div>
+                </div>
+
+                <div class="footer__columns-group">
+                    <div class="footer__column footer__column--info">
+                        <h4 class="footer__column-title">ИНФОРМАЦИЯ</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#" class="footer__link">О компании</a></li>
+                            <li class="footer__list-item"><a href="#" class="footer__link">Гарантии вкуса и <br> свежести</a></li>
+                            <li class="footer__list-item"><a href="#" class="footer__link">Доставка и оплата</a></li>
+                            <li class="footer__list-item"><a href="#" class="footer__link">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column footer__column--catalog">
+                        <h4 class="footer__column-title">КАТАЛОГ</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#" class="footer__link">Каталог десертов</a></li>
+                            <li class="footer__list-item"><a href="#" class="footer__link">Готовые наборы</a></li>
+                            <li class="footer__list-item"><a href="#" class="footer__link">Собрать свой набор</a></li>
+                            <li class="footer__list-item"><a href="#" class="footer__link">Акции</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column footer__column--business">
+                        <h4 class="footer__column-title">ДЛЯ БИЗНЕСА</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#" class="footer__link">Корпоративные подарки</a></li>
+                            <li class="footer__list-item"><a href="#" class="footer__link">Для юридических лиц</a></li>
+                            <li class="footer__list-item"><a href="#" class="footer__link">Оптовикам</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column footer__column--contact">
+                        <div class="footer__contact-details">
+                            <p class="footer__contact-phone">+7 (812) 309 82 88</p>
+                            <p class="footer__contact-hours">с 9:00 до 21:00</p>
+                        </div>
+                        <div class="footer__social-links">
+                            <a href="#" class="footer__social-item">
+                                <img class="footer__social-icon" alt="Иконка Instagram" src="Group 27 (1).png">
+                            </a>
+                            <a href="#" class="footer__social-item">
+                                <img class="footer__social-icon" alt="Иконка Facebook " src="Group 28 (1).png">
+                            </a>
+                            <a href="#" class="footer__social-item">
+                                <img class="footer__social-icon" alt="Иконка VKontakte" src="Group 29 (1).png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <p>&copy; 2021 Макароншоп<br>ООО "Квантум", Санкт-Петербург, улица Маршала Тухачевского,<br>дом 22</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
