@@ -1,0 +1,61 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  
+    @media (max-width: 1200px) {
+      max-width: 960px;
+    }
+  
+    @media (max-width: 992px) {
+      max-width: 720px;
+    }
+  
+    @media (max-width: 768px) {
+      max-width: 540px;
+    }
+  
+    @media (max-width: 576px) {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  }
+  
+  .holidays {
+    text-align: center;
+  
+    &__div {
+      max-width: 1170px;
+      min-height: 400px;
+      background-image: url('../img/Frame 364.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain; /* Важное свойство - изображение не обрезается */
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+  
+      @media (max-width: 1440px) {
+        width: 100%;
+      }
+  
+      @media (max-width: 992px) {
+        min-height: 350px;
+      }
+  
+      @media (max-width: 768px) {
+        min-height: 300px;
+        background-size: cover; /* На мобильных можно использовать cover если нужно заполнение */
+      }
+  
+      @media (max-width: 576px) {
+        min-height: 250px;
+        background-image: url('../img/Frame 368.png');
+        background-size: contain; /* Для мобильной версии тоже contain */
+      }
+  
+      @media (max-width: 400px) {
+        min-height: 200px;
+      }
+    }
+  }

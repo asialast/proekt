@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["index.scss"],"sourcesContent":["@import \"header.scss\";\r\n@import \"hero.scss\";\r\n@import \"card.scss\";\r\n@import \"popular.scss\";\r\n@import \"news.scss\";\r\n@import \"care.css\";\r\n@import \"hiliday.scss\";\r\n@import \"footer.scss\";"],"file":"index.css"}

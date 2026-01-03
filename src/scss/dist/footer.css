@@ -1,0 +1,312 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+  color: #292929;
+  background-color: #f8f8f8;
+  /* Цвет фона страницы для контраста с футером */
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+}
+
+.footer__container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer__container {
+    display: grid;
+    /* На десктопе используем Grid */
+    grid-template-columns: 280px minmax(120px, 1fr) minmax(120px, 1fr) minmax(120px, 1fr) 200px;
+    /* contact */
+    grid-template-areas: "features info catalog business contact" "copyright copyright copyright copyright copyright";
+    /* Копирайт занимает всю ширину */
+    gap: 20px 30px;
+    /* row-gap (между верхней частью и копирайтом) и column-gap (между колонками) */
+    align-items: start;
+    /* Выравнивание всех элементов сетки по верхнему краю */
+    padding: 0;
+    /* Убираем горизонтальный паддинг, если контейнер уже занимает max-width */
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__container {
+    padding: 0;
+    grid-template-columns: 280px minmax(130px, 1fr) minmax(130px, 1fr) minmax(130px, 1fr) 200px;
+    gap: 0 40px;
+  }
+}
+
+.footer__top-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer__top-content {
+    display: contents;
+  }
+}
+
+.footer__features {
+  display: flex;
+  flex-direction: column;
+  /* Вертикальное расположение фич на мобильных */
+  align-items: center;
+  /* Центрирование элементов фич по горизонтали */
+  gap: 30px;
+  /* Отступ между отдельными фичами */
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer__features {
+    grid-area: features;
+    display: flex;
+    /* Фичи внутри своего блока grid-area: features */
+    flex-direction: row;
+    /* Фичи располагаются горизонтально */
+    justify-content: space-between;
+    /* Равномерное распределение */
+    align-items: flex-start;
+    /* Выравнивание блока фич по верхнему краю */
+    gap: 0;
+    /* Промежутки между элементами управляются justify-content */
+  }
+}
+
+.footer__feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Центрирование иконки и текста внутри своего блока */
+  text-align: center;
+  /* Центрирование текста */
+  width: 100%;
+  /* Занимает всю доступную ширину на мобильных */
+  max-width: 150px;
+  /* Ограничение ширины текстового блока фичи */
+}
+
+@media (min-width: 768px) {
+  .footer__feature-item {
+    width: auto;
+    /* Ширина элемента фичи подстраивается под содержимое */
+    max-width: 90px;
+    /* Ограничиваем ширину для 3 элементов в ряду */
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__feature-item {
+    max-width: 80px;
+    /* Уточняем ширину элементов фич */
+  }
+}
+
+.footer__feature-icon {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer__feature-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  width: 140px;
+}
+
+.footer__columns-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer__columns-group {
+    display: contents;
+  }
+}
+
+.footer__column {
+  width: 100%;
+  max-width: 250px;
+  /* Ограничиваем ширину колонок на мобильных */
+  text-align: center;
+  /* Центрирование текста колонок на мобильных */
+}
+
+@media (min-width: 768px) {
+  .footer__column {
+    text-align: left;
+    /* Выравнивание по левому краю */
+  }
+  .footer__column--info {
+    grid-area: info;
+  }
+  .footer__column--catalog {
+    grid-area: catalog;
+  }
+  .footer__column--business {
+    grid-area: business;
+  }
+  .footer__column--contact {
+    grid-area: contact;
+    text-align: right;
+    /* Выравнивание по правому краю, как на изображении */
+  }
+}
+
+.footer__column-title {
+  font-size: 16px;
+  font-weight: 600;
+  /* Полужирный шрифт */
+  color: #292929;
+  margin-top: 0;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  /* Небольшой межбуквенный интервал */
+  text-transform: uppercase;
+  /* Текст в верхнем регистре, как на макете */
+}
+
+@media (min-width: 768px) {
+  .footer__column-title {
+    text-align: left;
+  }
+}
+
+.footer__list {
+  list-style: none;
+  /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Отступ между элементами списка */
+}
+
+@media (min-width: 768px) {
+  .footer__list {
+    text-align: left;
+  }
+}
+
+.footer__list-item {
+  margin: 0;
+}
+
+.footer__link {
+  text-decoration: none;
+  /* Убираем подчеркивание */
+  color: #292929;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  /* Плавное изменение цвета при наведении */
+  white-space: nowrap;
+  /* Предотвращает перенос длинных ссылок */
+}
+
+.footer__link:hover {
+  color: #3498db;
+  /* Синий цвет при наведении */
+}
+
+.footer__contact-details {
+  margin-bottom: 20px;
+}
+
+.footer__contact-phone {
+  font-size: 18px;
+  font-weight: 600;
+  /* Полужирный шрифт */
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+  /* Предотвращает перенос номера телефона */
+}
+
+.footer__contact-hours {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0 0 0;
+  /* Небольшой отступ сверху */
+}
+
+.footer__social-links {
+  display: flex;
+  gap: 10px;
+  /* Отступ между иконками */
+  margin-top: 15px;
+  justify-content: center;
+  /* Центрирование иконок на мобильных */
+}
+
+@media (min-width: 768px) {
+  .footer__social-links {
+    justify-content: flex-end;
+    /* Выравнивание иконок соцсетей по правому краю */
+  }
+}
+
+.footer__social-item {
+  display: block;
+  /* Делает всю область круга кликабельной */
+}
+
+.footer__social-item:hover .footer__social-icon {
+  border-color: #3498db;
+  /* Синяя рамка при наведении */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+  /* Легкая тень */
+}
+
+.footer__social-icon {
+  display: block;
+  width: 40px;
+  /* Примерный размер иконки */
+  height: 40px;
+}
+
+.footer__copyright {
+  text-align: center;
+  /* Центрирование копирайта на мобильных */
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+  width: 100%;
+  /* Занимает всю ширину */
+}
+
+.footer__copyright p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .footer__copyright {
+    grid-area: copyright;
+    text-align: left;
+    /* Выравнивание по левому краю, как запрошено */
+    width: auto;
+    /* Ширина по контенту или по области сетки */
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */
